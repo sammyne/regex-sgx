@@ -107,18 +107,21 @@ pattern = []
 # For very fast prefix literal matching.
 [dependencies.aho-corasick]
 #version = "0.7.6"
+branch = "rsgx_1.0.9"
 optional = true
-git = "https://github.com/mesalock-linux/aho-corasick-sgx"
+git = "https://github.com/sammyne/aho-corasick-sgx"
 
 # For skipping along search text quickly when a leading byte is known.
 [dependencies.memchr]
 #version = "2.2.1"
+branch = "v1.0.9-backup"
 optional = true
 git = "https://github.com/mesalock-linux/rust-memchr-sgx"
 
 # For managing regex caches quickly across multiple threads.
 [dependencies.thread_local]
 #version = "0.3.6"
+branch = "v1.0.9-backup"
 optional = true
 git = "https://github.com/mesalock-linux/thread_local-rs-sgx"
 
@@ -129,7 +132,7 @@ version = "0.6.12"
 default-features = false
 
 [dependencies]
-sgx_tstd = { rev = "v1.0.9", git="https://github.com/baidu/rust-sgx-sdk.git", optional = true }
+sgx_tstd = { git="https://github.com/apache/teaclave-sgx-sdk", optional = true, tag = "v1.0.9" }
 
 [dev-dependencies]
 # For examples.
